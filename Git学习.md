@@ -1,27 +1,53 @@
 # Git学习
 
-### 区间概念
+### 基础学习
+
+#### 区间概念
 
 * **工作区（Working Directory）**：本地硬盘目录，一般是项目当前目录
 * **暂存区（stage）**:一般餐放在（.git/index）中，也叫索引（index）
 * **版本区（Respository）**:Git本地版本库，有个隐藏目录.git
 * **分支（Branch）**：Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD
 
-### 提交Git流程
+#### 基础语法
 
-1. 通过`git add` 从工作区提交到暂存区
-2. 在通过`git commit`从暂存区提交到版本区
+`git init`:初始化本地库
 
+`git status`:查看本地库状态
 
-#### **其他操作**
+* 通过`git add` 从工作区提交到暂存区
 
-①查看工作区和暂存区最新版本的区别：`“git diff HEAD -- filename”`
+* 在通过`git commit`从暂存区提交到版本区
 
-②新建过撤销**未add**： `git checkout  --filename`
+  推荐使用`git commit -m "日志信息" 文件名`
 
-③撤销**已add未commit**：先`git  reset [HEAD]  filename`，再 `git checkout -- filename`
+#### 查看历史版本
 
-④撤销**已add已commit**：`git reset --hard HEAD^`
+`git reflog [文件名]`：查看版本历史信息
 
-![Git工作流程图](../images/Git工作流程图.png)
+`git log [文件名]`：查看版本历史详细信息
 
+#### 版本回退\穿梭\撤销
+
+**回退**：
+
+* `git reset--hard HEAD^ `：一次回退一个版本，^代表版本个数
+* `git reset --hard HEAD~n`: 回退n次操作
+
+**穿梭** ：
+
+* `git reflog 文件名`：查看版本历史信息
+
+*  `git reset --hard 版本号`：回到某版本
+
+**撤销**：
+
+​	未 add，未 commit：
+
+* `git checkout --文件名`：还原为原来的文件
+
+​	已add，未提交：
+
+* `git reset [文件名]`：从暂存区撤回
+
+  ![指针操作原理](C:\Users\naruto\Desktop\images\指针操作原理.png)
