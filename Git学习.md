@@ -45,4 +45,6 @@
 
 * `git reset [文件名]`：从暂存区撤回
 
+  git版本切换，底层其实是移动的head指针
+  
   ![指针操作原理](C:\Users\naruto\Desktop\images\指针操作原理.png)
