@@ -5,9 +5,14 @@
 #### 区间概念
 
 * **工作区（Working Directory）**：本地硬盘目录，一般是项目当前目录
+
 * **暂存区（stage）**:一般餐放在（.git/index）中，也叫索引（index）
+
 * **版本区（Respository）**:Git本地版本库，有个隐藏目录.git
+
 * **分支（Branch）**：Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD
+
+  ![Git工作流程图](https://typora-image-wang.oss-cn-hangzhou.aliyuncs.com/img/Git工作流程图.png)
 
 #### 基础语法
 
@@ -47,7 +52,7 @@
 
   git版本切换，底层其实是移动的head指针
   
-  ![指针操作原理](C:\Users\naruto\Desktop\images\指针操作原理.png)
+  ![指针操作原理](https://typora-image-wang.oss-cn-hangzhou.aliyuncs.com/img/指针操作原理.png)
   
 
 ### 分支
@@ -70,7 +75,7 @@
 
 **产生冲突原因**：合并分支时，同一个文件在同一个链表位置产生不同的修改，Git无法决定使用哪一个，必须人为选择。
 
-![合并冲突](C:\Users\naruto\Desktop\images\合并冲突.png)
+![合并冲突](https://typora-image-wang.oss-cn-hangzhou.aliyuncs.com/img/合并冲突.png)
 
 **解决冲突**
 
