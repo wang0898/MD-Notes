@@ -99,7 +99,9 @@
 
 `git push 别名 分支`：推送本地分支所有内容到远程仓库
 
-`git pull 远程库地址别名 远程分支名`：拉取远程库最新内容并合并到本地库
+`git pull 远程库地址别名 远程分支名`：拉取远程库新内容合并到本地库，同时合并到工作区
+
+`git fetch 远程库地址别名 远程分支名：`：拉取远程库新内容合并到本地库，不合并到工作区，需再使用`git merge` 合并到工作区。 `git pull' 相当于 git fetch +  git merge`
 
 `git clone 远程库别名 远程分支名`：将远程库的内容拷到本地）
 
@@ -107,5 +109,10 @@
 git clone 会做如下操作。1、拉取代码。2、初始化本地仓库。3、创建别名
 ```
 
+git rebase 分支名：会将指定分支的commit全都取消，并作为补丁贴到当前分支上
 
+![image-20220812142725673](https://typora-image-wang.oss-cn-hangzhou.aliyuncs.com/img/image-20220812142725673.png)
 
+![image-20220812142741027](https://typora-image-wang.oss-cn-hangzhou.aliyuncs.com/img/image-20220812142741027.png)
+
+![image-20220812142746504](https://typora-image-wang.oss-cn-hangzhou.aliyuncs.com/img/image-20220812142746504.png)
